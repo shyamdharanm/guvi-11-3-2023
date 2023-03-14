@@ -1,0 +1,13 @@
+let obj1 = {name:"Person1", age:5};
+let obj2 = {age:5, name:"Person1"};
+
+// Convert the objects to strings with sorted keys
+let str1 = JSON.stringify(obj1, Object.keys(obj1).sort());
+let str2 = JSON.stringify(obj2, Object.keys(obj2).sort());
+
+// Compare the strings
+if (str1 === str2) {
+  console.log("The objects are equal.");
+} else {
+  console.log("The objects are not equal.");
+}
